@@ -6,5 +6,5 @@ Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int remainder = number % 2;
 Console.WriteLine("Является ли чесло чётным?");
-if (remainder > 0) Console.WriteLine("нет");
-else Console.WriteLine("да");
+if (remainder == 0) Console.WriteLine("да");
+else Console.WriteLine("нет");
