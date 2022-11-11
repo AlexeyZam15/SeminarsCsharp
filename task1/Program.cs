@@ -5,16 +5,16 @@
 // a = 2, b = 10 -> нет
 // a = 9, b = -3 -> да
 // a = -3 b = 9 -> нет
-
+Console.Clear();
 Console.WriteLine("Введите первое число");
 int a = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе число");
 int b = Convert.ToInt32(Console.ReadLine());
-if (a == b*b) 
+if (a == b * b)
 {
     Console.WriteLine($"Число {a} является квадратом {b}");
 }
-else 
+else
 {
     Console.WriteLine($"Число {a} не является квадратом {b}");
 }
