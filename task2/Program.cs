@@ -8,9 +8,9 @@ Console.WriteLine("Введите второе число");
 int b = Convert.ToInt32(Console.ReadLine());
 int max = a;
 int min = b;
-if (b>a)
+if (b > a)
 {
-    max=b;
-    min=a;
+    max = b;
+    min = a;
 }
 Console.WriteLine($"Число {max} - большее, число {min} - меньшее.");
