@@ -8,9 +8,13 @@ Console.WriteLine("Введите второе число");
 int b = Convert.ToInt32(Console.ReadLine());
 int max = a;
 int min = b;
-if (b > a)
+if (a == b) Console.WriteLine("Числа равны");
+else
 {
-    max = b;
-    min = a;
+    if (b > a)
+    {
+        max = b;
+        min = a;
+    }
+    Console.WriteLine($"Число {max} - большее, число {min} - меньшее.");
 }
-Console.WriteLine($"Число {max} - большее, число {min} - меньшее.");
