@@ -9,7 +9,8 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 int thirdDigit(int numb)
 {
-    while (numb > 999) numb = numb / 10;
+    numb = numb < 0 ? numb * -1 : numb;
+    while (numb > 999 ) numb = numb / 10;
     return numb < 100 ? -1 : numb % 10;
 }
 
