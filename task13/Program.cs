@@ -7,11 +7,11 @@
 Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int thirdDigit(int numb)
+int ThirdDigit(int numb)
 {
     numb = numb < 0 ? numb * -1 : numb;
     while (numb > 999 ) numb = numb / 10;
     return numb < 100 ? -1 : numb % 10;
 }
-
-Console.WriteLine(thirdDigit(number) == -1 ? "Третьей цифры нет" : $"Третья цифра числа - {thirdDigit(number)}");
+int thirdDigit = ThirdDigit(number);
+Console.WriteLine(thirdDigit == -1 ? "Третьей цифры нет" : $"Третья цифра числа - {thirdDigit}");
