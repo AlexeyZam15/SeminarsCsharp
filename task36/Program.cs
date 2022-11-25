@@ -35,7 +35,7 @@ while (sizeArray <= 0)
     if (sizeArray <= 0) Console.WriteLine("Введены неверные данные");
 }
 
-int[] array = CreateArrayRndInt(sizeArray, 100, 999);
+int[] array = CreateArrayRndInt(sizeArray, -99, 99);
 PrintArray(array, "[", "]", ",");
 
 int SumOddIndexArray(int[] arr)
