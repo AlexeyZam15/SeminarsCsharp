@@ -14,29 +14,40 @@ void PrintArray(int[] arr, string beginStr, string separatorElems, string endStr
     Console.Write(endStr);
 }
 
-int[] StringToNumbersArray(string str, int amountNumbers)
+// int[] StringToNumbersArray(string str, int amountNumbers)
+// {
+//     int[] arr = new int[amountNumbers];
+//     string number = string.Empty;
+//     int indexArray = 0;
+//     for (int i = 0; i < str.Length; i++)
+//     {
+//         if (str[i] != ',')
+//         {
+//             number += str[i];
+//         }
+//         if (str[i] == ',')
+//         {
+//             arr[indexArray] = Convert.ToInt32(number);
+//             number = string.Empty;
+//             indexArray++;
+//         }
+//         if (i == str.Length - 1)
+//         {
+//             arr[indexArray] = Convert.ToInt32(number);
+//             number = string.Empty;
+//             indexArray++;
+//         }
+//     }
+//     return arr;
+// }
+
+int[] StringToNumbersArray(string str)
 {
-    int[] arr = new int[amountNumbers];
-    string number = string.Empty;
-    int indexArray = 0;
-    for (int i = 0; i < str.Length; i++)
+    string[] arrString = str.Split(',');
+    int[] arr = new int[arrString.Length];
+    for (int i = 0; i < arr.Length; i++)
     {
-        if (str[i] != ',')
-        {
-            number += str[i];
-        }
-        if (str[i] == ',')
-        {
-            arr[indexArray] = Convert.ToInt32(number);
-            number = string.Empty;
-            indexArray++;
-        }
-        if (i == str.Length - 1)
-        {
-            arr[indexArray] = Convert.ToInt32(number);
-            number = string.Empty;
-            indexArray++;
-        }
+        arr[i] = Convert.ToInt32(arrString[i]);
     }
     return arr;
 }
@@ -51,8 +62,8 @@ int AmountNumbersAboveZeroArray(int[] arr)
     return amount;
 }
 
-Console.Write("Введите количество чисел для ввода: ");
-int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите количество чисел для ввода: ");
+// int m = Convert.ToInt32(Console.ReadLine());
 
 // int[] array = new int[m];
 // for (int i = 0; i < array.Length; i++)
@@ -61,10 +72,11 @@ int m = Convert.ToInt32(Console.ReadLine());
 //     array[i] = Convert.ToInt32(Console.ReadLine());
 // }
 
-Console.Write($"Введите {m} целых чисел через запятую: ");
+// Console.Write($"Введите {m} целых чисел через запятую: ");
+Console.Write("Введите целые числа через запятую: ");
 string numbersString = Console.ReadLine();
 
-int[] array = StringToNumbersArray(numbersString, m);
+int[] array = StringToNumbersArray(numbersString);
 
 int amountNumbersAboveZeroArray = AmountNumbersAboveZeroArray(array);
 PrintArray(array, "", ", ", $" -> {amountNumbersAboveZeroArray}");
