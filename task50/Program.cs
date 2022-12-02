@@ -49,7 +49,6 @@ bool IndexMatrix(int[,] matrix, int rowIndex1, int columnIndex1)
 void StringToTwoNumbers(string str, out int rowIndex1, out int columnIndex1)
 {
     string[] arrString = str.Split(',');
-    (int, int) numbers = (0, 0);
     rowIndex1 = Convert.ToInt32(arrString[0]);
     columnIndex1 = Convert.ToInt32(arrString[1]);
 }
