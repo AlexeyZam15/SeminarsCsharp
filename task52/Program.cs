@@ -46,7 +46,7 @@ double[] AverageColumnsMatrix(int[,] matrix)
         {
             averageArray[j] += matrix[i, j];
         }
-        averageArray[j] = Math.Round(averageArray[j] / Convert.ToDouble(matrix.GetLength(0)),1);
+        averageArray[j] = Math.Round(averageArray[j] / matrix.GetLength(0),1);
     }
     return averageArray;
 }
