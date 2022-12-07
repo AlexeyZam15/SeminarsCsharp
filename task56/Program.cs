@@ -31,8 +31,8 @@ void PrintMatrix(int[,] matrix, string beginRow, string separatorElems, string e
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             if (j < matrix.GetLength(1) - 1)
-                Console.Write($"{matrix[i, j],3}{separatorElems}");
-            else Console.Write($"{matrix[i, j],3}");
+                Console.Write($"{matrix[i, j],2}{separatorElems}");
+            else Console.Write($"{matrix[i, j],2}");
         }
         Console.WriteLine(endRow);
     }
