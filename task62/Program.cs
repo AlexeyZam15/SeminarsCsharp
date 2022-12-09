@@ -9,14 +9,15 @@ int[,] CreateMatrixIncIntSpiral(int rows, int columns, int startNumber)
 {
     int[,] matrix = new int[rows, columns];
     int direction = 0;
-    int size = rows + columns - 1;
+    int size = rows * columns;
     int indexi = 0;
     int indexj = 0;
-    for (int i = 0; i < size; i++)
+    int directionLength = columns;
+    while (startNumber <= size)
     {
-        for (int j = 0; j < columns; j++)
+        for (int j = 0; j < directionLength; j++)
         {
-            // Console.WriteLine($"{direction} {indexi} {indexj}");
+            // Console.WriteLine($"{direction} {directionLength} {indexi} {indexj} {startNumber + 1}");
             if (direction == 0)
             {
                 matrix[indexi, indexj++] = startNumber++;
@@ -34,26 +35,32 @@ int[,] CreateMatrixIncIntSpiral(int rows, int columns, int startNumber)
         }
         if (direction == 0)
         {
-            columns--;
+            rows--;
+            directionLength = rows;
             indexj--;
             indexi++;
             direction = 1;
         }
         else if (direction == 1)
         {
+            columns--;
+            directionLength = columns;
             direction = 2;
             indexi--;
             indexj--;
         }
         else if (direction == 2)
         {
-            columns--;
+            rows--;
+            directionLength = rows;
             direction = 3;
             indexj++;
             indexi--;
         }
         else if (direction == 3)
         {
+            columns--;
+            directionLength = columns;
             direction = 0;
             indexi++;
             indexj++;
